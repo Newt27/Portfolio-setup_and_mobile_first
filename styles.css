@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@media all and (min-width: 375px) {
+  body {
+    background-image: url(header-illsutration-mobile@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 3em;
+  }
+
+  header {
+    gap: 100px;
+  }
+
+  .appbar {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 20px;
+    padding: 10px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+  }
+
+  .times {
+    flex: 10;
+  }
+
+  .group3 {
+    flex: 1;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .bar {
+    padding: 10px;
+    padding-top: 20px;
+    position: absolute;
+    right: 1.2em;
+    font-size: 1.3em !important;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    top: 5em;
+  }
+
+  .intro {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 160%;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px;
+    gap: 0;
+    position: relative;
+  }
+
+  .intro1 {
+    margin: 0;
+    color: #172b4d;
+  }
+
+  .intro2 {
+    margin: 0;
+    color: #36b37e;
+  }
+
+  .content {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    color: #172b4d;
+  }
+
+  .social {
+    font-size: 1.3em !important;
+    padding: 5px;
+    gap: 10px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  body {
+    background-image: url(Header-llustration-desktop@2x.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: inherit;
+    flex-shrink: 0;
+  }
+
+  .appbar {
+    display: none;
+  }
+
+  .bar {
+    display: none !important;
+  }
+
+  .nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    gap: 2em;
+  }
+
+  .content {
+    padding: 12em;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #172b4d;
+  }
+
+  i:hover {
+    position: relative;
+    bottom: 2px;
+    border-radius: 30%;
+    background: #36b37e;
+  }
+}
+
+.bar:enabled {
+  border-radius: 5%;
+  background: #36b37e;
+}
+
+.social:enabled {
+  border-radius: 5%;
+  background: #36b37e;
+}
+
+li:hover {
+  font-size: 1.1em;
+  text-decoration: underline;
+  font-weight: bold;
+}
