@@ -34,15 +34,23 @@ body {
     flex: 1;
   }
 
-  .nav {
+  .nav1 {
     display: none;
   }
 
+  .nav2 {
+    display: flex;
+    margin: 1em;
+  }
+
+  .mylogo {
+    flex: 1;
+    font-family: "Inter", sans-serif;
+    color: #172b4d;
+  }
+
   .bar {
-    padding: 10px;
-    padding-top: 20px;
-    position: absolute;
-    right: 1.2em;
+    flex: 1;
     font-size: 1.3em !important;
   }
 
@@ -113,12 +121,22 @@ body {
     display: none !important;
   }
 
-  .nav {
+  .mylogo {
+    position: absolute;
+    top: 2%;
+  }
+
+  .nav1 {
+    padding: 0;
     list-style-type: none;
     display: flex;
     justify-content: center;
     flex: 1;
     gap: 2em;
+  }
+
+  br {
+    display: none;
   }
 
   .content {
