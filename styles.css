@@ -8,7 +8,7 @@ body {
   body {
     background-image: url(header-illsutration-mobile@2x.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: 0 3em;
   }
 
@@ -42,8 +42,7 @@ body {
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 40px;
-    position: relative;
-    top: 5em;
+    margin-top: 5em;
   }
 
   .intro {
@@ -90,7 +89,6 @@ body {
     background-repeat: no-repeat;
     background-size: 120%;
     background-position: inherit;
-    flex-shrink: 0;
   }
 
   header {
