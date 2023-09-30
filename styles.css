@@ -87,7 +87,7 @@ body {
   body {
     background-image: url(Header-llustration-desktop@2x.png);
     background-repeat: no-repeat;
-    background-size: 120%;
+    background-size: cover;
     background-position: inherit;
   }
 
@@ -110,6 +110,10 @@ body {
 
   br {
     display: none;
+  }
+
+  section {
+    margin-top: 12%;
   }
 
   .content {
