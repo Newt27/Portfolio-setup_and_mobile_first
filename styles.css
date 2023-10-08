@@ -291,6 +291,9 @@ li {
 
   .bg1 {
     position: absolute;
+    left: 0;
+    top: 19em;
+
   }
 
   .bg2 {
@@ -325,6 +328,10 @@ li {
   .info p {
     font-size: 1.5em;
     height: 1.5em;
+  }
+  
+  button:hover {
+    font-size: 1.2em;
   }
 }
 
@@ -491,5 +498,9 @@ li {
     width: 7em;
     right: 0;
     top: -4em;
+  }
+
+  button:hover {
+    font-size: 0.7em;
   }
 }
