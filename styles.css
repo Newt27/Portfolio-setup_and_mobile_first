@@ -544,7 +544,7 @@ span {
     display: none !important;
   }
 
-  br {
+  .intro br {
     display: none;
   }
 
@@ -593,7 +593,7 @@ span {
 
   .project {
     width: 12em;
-    height: 20em;
+    height: 16em;
   }
 
   .projectInfo {
@@ -781,9 +781,111 @@ span {
 }
 
 @media all and (min-width: 1024px) {
+  .toolbar {
+    font-size: 1.1em;
+  }
+
+  .mylogo {
+    padding: 0.5em;
+  }
+
+  .nav1 {
+    padding: 0.5em;
+  }
+
+  .intro {
+    font-size: 1.2em;
+  }
+
   .content {
     width: 55%;
     animation-name: slideIn3;
+  }
+
+  .project {
+    width: 16em;
+    height: 20em;
+  }
+
+  .project p {
+    font-size: 1.2em;
+  }
+
+  li {
+    font-size: 0.65em;
+  }
+
+  button {
+    font-size: 0.8em;
+  }
+
+  .project button {
+    font-size: 0.8em;
+    margin: 0.7em auto;
+  }
+
+  .aboutme {
+    font-size: 1em;
+  }
+
+  .info {
+    width: 16em;
+    height: 18em;
+  }
+
+  .contact {
+    width: 75%;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .toolbar {
+    font-size: 1.4em;
+  }
+
+  .intro {
+    font-size: 1.2em;
+  }
+
+  .project {
+    width: 18em;
+    height: 23em;
+    font-size: 1.25em;
+  }
+
+  li {
+    font-size: 0.7em;
+  }
+
+  .aboutme {
+    font-size: 1.25em;
+  }
+
+  .info {
+    width: 18em;
+    height: 20em;
+    font-size: 1.25em;
+  }
+
+  .info ul {
+    gap: 0.5em;
+  }
+
+  .contact {
+    width: 75%;
+    font-size: 1.2em;
+  }
+
+  button {
+    font-size: 1.1em;
+  }
+
+  .project button {
+    margin: 1em auto;
+  }
+
+  .contact button {
+    font-size: 0.8em;
   }
 }
 
