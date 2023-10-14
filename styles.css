@@ -21,6 +21,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: -1em;
+  padding: 1em;
 }
 
 .mylogo {
@@ -28,6 +29,13 @@ body {
   font-weight: 400;
   line-height: 28px;
   padding: 0.5em 0;
+  transition: rotate 1s, color 1s;
+  animation-duration: 1s;
+  animation-name: logoRotate;
+}
+
+.mylogo:hover {
+  color: #36b37f;
 }
 
 .intro {
@@ -44,6 +52,8 @@ body {
   font-weight: 700;
   line-height: 130%;
   margin: 0;
+  animation-duration: 1s;
+  animation-name: slideIn;
 }
 
 .intro2 {
@@ -51,12 +61,26 @@ body {
   font-weight: 700;
   line-height: 52px;
   margin: 0;
+  animation-duration: 2s;
+  animation-name: slideIn;
 }
 
 .content {
   color: var(--neutrals-n-800, #172b4d);
   font-weight: 400;
   line-height: 140%;
+  animation-duration: 5s;
+}
+
+i {
+  transition:
+    rotate 1s,
+    color 1s;
+}
+
+i:hover {
+  color: #36b37f;
+  rotate: 360deg;
 }
 
 .icons {
@@ -131,12 +155,26 @@ button {
   border-radius: 0.25em;
   background: var(--theme-2-primary-2, #36b37f);
   border: none;
+  transition: background-color 1s;
+}
+
+button:hover {
+  background-color: #087045;
 }
 
 li {
   border-radius: 0.25em;
   background: var(--theme-2-neutral-10, #ebf0ee);
   padding: 0.5em 0.75em;
+  transition:
+    background-color 2s,
+    color 250ms;
+}
+
+li:hover,
+li:focus {
+  background-color: #36b37e;
+  color: #fff;
 }
 
 .aboutme {
@@ -211,6 +249,14 @@ li {
   line-height: 133.333%;
   letter-spacing: 0.36px;
   padding: 0.75em;
+  transition:
+    background 2s,
+    color 250ms;
+}
+
+.info li:hover {
+  background: #36b37e;
+  color: #fff;
 }
 
 .contact {
@@ -244,6 +290,12 @@ li {
   border-radius: 4px;
   border: 1px solid var(--theme-2-neutral-9, #d0d9d4);
   background: var(--theme-1-neutrals-11, #fff);
+  transition: border 1s;
+}
+
+input:focus {
+  border: 1px solid #36b37f;
+  outline: none;
 }
 
 textarea {
@@ -255,6 +307,12 @@ textarea {
   border-radius: 4px;
   border: 1px solid var(--theme-2-neutral-9, #d0d9d4);
   background: var(--theme-1-neutrals-11, #fff);
+  transition: border 1s;
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid #36b37e;
 }
 
 footer {
@@ -282,10 +340,6 @@ span {
   width: 134px;
   height: 5px;
   margin-bottom: 5px;
-}
-
-button:hover {
-  background-color: #087045;
 }
 
 @media all and (min-width: 375px) {
@@ -325,6 +379,7 @@ button:hover {
   .content {
     font-size: 1.25em;
     width: 327px;
+    animation-name: slideIn;
   }
 
   .icons {
@@ -478,13 +533,18 @@ button:hover {
     font-weight: 600;
     line-height: 133.333%;
     font-size: 0.8em;
+    transition: color 1s;
+  }
+
+  .nav1:hover {
+    color: #36b37e;
   }
 
   .bar {
     display: none !important;
   }
 
-  br {
+  .intro br {
     display: none;
   }
 
@@ -503,6 +563,7 @@ button:hover {
   .content {
     width: 75%;
     font-size: 0.8em;
+    animation-name: slideIn2;
   }
 
   .intro .icons {
@@ -532,7 +593,7 @@ button:hover {
 
   .project {
     width: 12em;
-    height: 20em;
+    height: 16em;
   }
 
   .projectInfo {
@@ -716,5 +777,160 @@ button:hover {
     width: 10%;
     left: 20%;
     bottom: 6em;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .toolbar {
+    font-size: 1.1em;
+  }
+
+  .mylogo {
+    padding: 0.5em;
+  }
+
+  .nav1 {
+    padding: 0.5em;
+  }
+
+  .intro {
+    font-size: 1.2em;
+  }
+
+  .content {
+    width: 55%;
+    animation-name: slideIn3;
+  }
+
+  .project {
+    width: 16em;
+    height: 20em;
+  }
+
+  .project p {
+    font-size: 1.2em;
+  }
+
+  li {
+    font-size: 0.65em;
+  }
+
+  button {
+    font-size: 0.8em;
+  }
+
+  .project button {
+    font-size: 0.8em;
+    margin: 0.7em auto;
+  }
+
+  .aboutme {
+    font-size: 1em;
+  }
+
+  .info {
+    width: 16em;
+    height: 18em;
+  }
+
+  .contact {
+    width: 75%;
+  }
+}
+
+@media all and (min-width: 1440px) {
+  .toolbar {
+    font-size: 1.4em;
+  }
+
+  .intro {
+    font-size: 1.2em;
+  }
+
+  .project {
+    width: 18em;
+    height: 23em;
+    font-size: 1.25em;
+  }
+
+  li {
+    font-size: 0.7em;
+  }
+
+  .aboutme {
+    font-size: 1.25em;
+  }
+
+  .info {
+    width: 18em;
+    height: 20em;
+    font-size: 1.25em;
+  }
+
+  .info ul {
+    gap: 0.5em;
+  }
+
+  .contact {
+    width: 75%;
+    font-size: 1.2em;
+  }
+
+  button {
+    font-size: 1.1em;
+  }
+
+  .project button {
+    margin: 1em auto;
+  }
+
+  .contact button {
+    font-size: 0.8em;
+  }
+}
+
+@keyframes logoRotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 300%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideIn2 {
+  from {
+    margin-left: 300%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 75%;
+  }
+}
+
+@keyframes slideIn3 {
+  from {
+    margin-left: 300%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 55%;
   }
 }
