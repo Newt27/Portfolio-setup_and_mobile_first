@@ -52,6 +52,8 @@ body {
   font-weight: 700;
   line-height: 130%;
   margin: 0;
+  animation-duration: 1s;
+  animation-name: slideIn;
 }
 
 .intro2 {
@@ -59,23 +61,25 @@ body {
   font-weight: 700;
   line-height: 52px;
   margin: 0;
+  animation-duration: 2s;
+  animation-name: slideIn;
 }
 
 .content {
   color: var(--neutrals-n-800, #172b4d);
   font-weight: 400;
   line-height: 140%;
+  animation-duration: 5s;
 }
 
 i {
-  transition: 
-    rotate 1s;
+  transition:
+    rotate 1s,
     color 1s;
-
 }
 
 i:hover {
-  color:#36b37f;
+  color: #36b37f;
   rotate: 360deg;
 }
 
@@ -286,8 +290,7 @@ li:focus {
   border-radius: 4px;
   border: 1px solid var(--theme-2-neutral-9, #d0d9d4);
   background: var(--theme-1-neutrals-11, #fff);
-  transition: 
-    border 1s;
+  transition: border 1s;
 }
 
 input:focus {
@@ -309,7 +312,7 @@ textarea {
 
 textarea:focus {
   outline: none;
-  border: 1px solid #36b37e
+  border: 1px solid #36b37e;
 }
 
 footer {
@@ -376,6 +379,7 @@ span {
   .content {
     font-size: 1.25em;
     width: 327px;
+    animation-name: slideIn;
   }
 
   .icons {
@@ -559,6 +563,7 @@ span {
   .content {
     width: 75%;
     font-size: 0.8em;
+    animation-name: slideIn2;
   }
 
   .intro .icons {
@@ -775,6 +780,13 @@ span {
   }
 }
 
+@media all and (min-width: 1024px) {
+  .content {
+    width: 55%;
+    animation-name: slideIn3;
+  }
+}
+
 @keyframes logoRotate {
   from {
     rotate: 0deg;
@@ -782,5 +794,41 @@ span {
 
   to {
     rotate: 360deg;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    margin-left: 300%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slideIn2 {
+  from {
+    margin-left: 300%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 75%;
+  }
+}
+
+@keyframes slideIn3 {
+  from {
+    margin-left: 300%;
+    width: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 55%;
   }
 }
