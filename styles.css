@@ -21,6 +21,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: -1em;
+  padding: 1em;
 }
 
 .mylogo {
@@ -28,6 +29,13 @@ body {
   font-weight: 400;
   line-height: 28px;
   padding: 0.5em 0;
+  transition: rotate 1s, color 1s;
+  animation-duration: 1s;
+  animation-name: logoRotate;
+}
+
+.mylogo:hover {
+  color: #36b37f;
 }
 
 .intro {
@@ -57,6 +65,18 @@ body {
   color: var(--neutrals-n-800, #172b4d);
   font-weight: 400;
   line-height: 140%;
+}
+
+i {
+  transition: 
+    rotate 1s;
+    color 1s;
+
+}
+
+i:hover {
+  color:#36b37f;
+  rotate: 360deg;
 }
 
 .icons {
@@ -131,12 +151,26 @@ button {
   border-radius: 0.25em;
   background: var(--theme-2-primary-2, #36b37f);
   border: none;
+  transition: background-color 1s;
+}
+
+button:hover {
+  background-color: #087045;
 }
 
 li {
   border-radius: 0.25em;
   background: var(--theme-2-neutral-10, #ebf0ee);
   padding: 0.5em 0.75em;
+  transition:
+    background-color 2s,
+    color 250ms;
+}
+
+li:hover,
+li:focus {
+  background-color: #36b37e;
+  color: #fff;
 }
 
 .aboutme {
@@ -211,6 +245,14 @@ li {
   line-height: 133.333%;
   letter-spacing: 0.36px;
   padding: 0.75em;
+  transition:
+    background 2s,
+    color 250ms;
+}
+
+.info li:hover {
+  background: #36b37e;
+  color: #fff;
 }
 
 .contact {
@@ -244,6 +286,13 @@ li {
   border-radius: 4px;
   border: 1px solid var(--theme-2-neutral-9, #d0d9d4);
   background: var(--theme-1-neutrals-11, #fff);
+  transition: 
+    border 1s;
+}
+
+input:focus {
+  border: 1px solid #36b37f;
+  outline: none;
 }
 
 textarea {
@@ -255,6 +304,12 @@ textarea {
   border-radius: 4px;
   border: 1px solid var(--theme-2-neutral-9, #d0d9d4);
   background: var(--theme-1-neutrals-11, #fff);
+  transition: border 1s;
+}
+
+textarea:focus {
+  outline: none;
+  border: 1px solid #36b37e
 }
 
 footer {
@@ -282,10 +337,6 @@ span {
   width: 134px;
   height: 5px;
   margin-bottom: 5px;
-}
-
-button:hover {
-  background-color: #087045;
 }
 
 @media all and (min-width: 375px) {
@@ -478,6 +529,11 @@ button:hover {
     font-weight: 600;
     line-height: 133.333%;
     font-size: 0.8em;
+    transition: color 1s;
+  }
+
+  .nav1:hover {
+    color: #36b37e;
   }
 
   .bar {
@@ -716,5 +772,15 @@ button:hover {
     width: 10%;
     left: 20%;
     bottom: 6em;
+  }
+}
+
+@keyframes logoRotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
   }
 }
