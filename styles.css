@@ -194,7 +194,7 @@ li:focus {
 }
 
 .aboutme p {
-  color: var(--neutrals-n-500, #42526e);
+  color: var(--neutrals-n-500, #0d0e11);
   font-weight: 400;
   line-height: 160%;
 }
@@ -828,13 +828,25 @@ span {
     font-size: 1em;
   }
 
+  .aboutme p {
+    font-size: 1em;
+  }
+
   .info {
     width: 16em;
     height: 18em;
   }
 
   .contact {
-    width: 75%;
+    width: 60%;
+  }
+
+  .icons2 {
+    gap: 1.5em;
+  }
+
+  footer .icons2 {
+    font-size: 1.2em;
   }
 }
 
@@ -918,14 +930,14 @@ span {
   }
 
   to {
-    margin-left: 0%;
+    margin-left: 300%;
     width: 75%;
   }
 }
 
 @keyframes slideIn3 {
   from {
-    margin-left: 300%;
+    margin-left: 120%;
     width: 100%;
   }
 
