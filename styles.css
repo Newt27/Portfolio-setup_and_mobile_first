@@ -124,7 +124,7 @@ i:hover {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  background-color: #fff;
+  background-color: #fdfdfd;
   border-radius: 0.5em;
   padding: 1em 0;
 }
