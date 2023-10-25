@@ -124,7 +124,7 @@ i:hover {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  background-color: #fff;
+  background-color: #fdfdfd;
   border-radius: 0.5em;
   padding: 1em 0;
 }
@@ -194,7 +194,7 @@ li:focus {
 }
 
 .aboutme p {
-  color: var(--neutrals-n-500, #42526e);
+  color: var(--neutrals-n-500, #0d0e11);
   font-weight: 400;
   line-height: 160%;
 }
@@ -457,7 +457,7 @@ span {
 
   .info p {
     font-size: 1.5em;
-    height: 1.5em;
+    height: 1.45em;
   }
 
   #firstName {
@@ -567,7 +567,7 @@ span {
   }
 
   .intro .icons {
-    font-size: 0.8em;
+    font-size: 0.9em;
   }
 
   .arrow {
@@ -828,13 +828,25 @@ span {
     font-size: 1em;
   }
 
+  .aboutme p {
+    font-size: 1em;
+  }
+
   .info {
     width: 16em;
     height: 18em;
   }
 
   .contact {
-    width: 75%;
+    width: 60%;
+  }
+
+  .icons2 {
+    gap: 1.5em;
+  }
+
+  footer .icons2 {
+    font-size: 1.2em;
   }
 }
 
@@ -918,14 +930,14 @@ span {
   }
 
   to {
-    margin-left: 0%;
+    margin-left: 300%;
     width: 75%;
   }
 }
 
 @keyframes slideIn3 {
   from {
-    margin-left: 300%;
+    margin-left: 120%;
     width: 100%;
   }
 
