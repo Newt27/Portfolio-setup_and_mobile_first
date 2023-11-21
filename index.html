@@ -15,10 +15,19 @@
         <header class="toolbar">
                 <div class="mylogo">My Logo</div>
                 <a href="" class="nav1 portfolio">Portfolio</a>
-                <a href="" class="nav1 about">About</a>
-                <a href="" class="nav1 contact1">Contact</a>
-                <a href=""><i class="bar fa fa-bars"></i></a>
+                <a href="#about" class="nav1 about">About</a>
+                <a href="#contact" class="nav1 contact1">Contact</a>
+                <span class="menuBtn showMenuBtn"><i class="bar fa fa-bars"></i></span>
         </header>
+        <!-- show in small screen when btn is clicked -->
+        <nav class="nav-container">
+            <div class="nav-toolbar">
+                <a href="#" class="nav-link">Portfolio</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+          
+        </nav>
         <section class="intro">
             <h2 class="intro1">Hey there.<br>I'm Newt.</h2>
             <h2 class="intro2">I'm a software developer.</h2>
@@ -46,7 +55,7 @@
                     <li>JavaScript</li>
                     <li>HTML</li>
                 </ul>
-                <button type="button" value="See Project">See Project</button>
+                <button type="button" value="See Project" class="seeProjectsBtn">See Project</button>
             </div>
         </div>
         <div class="project two">
@@ -58,7 +67,7 @@
                     <li>JavaScript</li>
                     <li>HTML</li>
                 </ul>
-                <button type="button" value="See Project">See Project</button>
+                <button type="button" value="See Project"class="seeProjectsBtn">See Project</button>
             </div>
         </div>
         <div class="project three">
@@ -70,7 +79,7 @@
                     <li>JavaScript</li>
                     <li>HTML</li>
                 </ul>
-                <button type="button" value="See Project">See Project</button>
+                <button type="button" value="See Project"class="seeProjectsBtn">See Project</button>
             </div>
         </div>
         <div class="project four">
@@ -82,7 +91,7 @@
                     <li>JavaScript</li>
                     <li>HTML</li>
                 </ul>
-                <button type="button" value="See Project">See Project</button>
+                <button type="button" value="See Project"class="seeProjectsBtn">See Project</button>
             </div>
         </div>
         <div class="project five">
@@ -94,7 +103,7 @@
                     <li>JavaScript</li>
                     <li>HTML</li>
                 </ul>
-                <button type="button" value="See Project">See Project</button>
+                <button type="button" value="See Project"class="seeProjectsBtn">See Project</button>
             </div>
         </div>
         <div class="project six">
@@ -106,15 +115,15 @@
                     <li>JavaScript</li>
                     <li>HTML</li>
                 </ul>
-                <button type="button" value="See Project">See Project</button>
+                <button type="button" value="See Project"class="seeProjectsBtn">See Project</button>
             </div>
         </div>
     </section>
-    <section class="aboutme">
-        <img class="bg1" src="img\bg-1.png">
-        <img class="bg2" src="img\bg-2.png">
-        <img class="bg4" src="img\bg-4.png">
-        <img class="bg5" src="img\bg-5.png">
+    <section class="aboutme" id="about">
+        <img class="bg1" src="img\bg-1.png" alt="background">
+        <img class="bg2" src="img\bg-2.png" alt="background">
+        <img class="bg4" src="img\bg-4.png" alt="background">
+        <img class="bg5" src="img\bg-5.png" alt="background">
         <h3>About me</h3>
         <p> I can help you build a product , feature or website Look through some of my work and experience! If you like what you see and have a project you need coded,    
             don’t hesitate to contact me.</p>
@@ -154,7 +163,7 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
         <p>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
         <form action="https://formspree.io/f/mpzgkrbn" method="post">
             <input type="text" id="fullName" name="fullName" placeholder="Full Name" maxlength="30" required>
@@ -165,8 +174,36 @@
             <button type="submit" value="get-in-touch">Get in touch</button>
         </form>
     </section>
+    <!-- demo -->
+    <div class="showCard">
+       
+    </div>
+    
+    <!-- <div class="projectCard">
+        <span class="close__card"><i class="fa fa-bars"></i></span>
+        <div class="feautred_bgcover">
+            
+        </div>
+        <div class="featured_titles">
+            <h3 class="projectTitle">
+                Keeping track of hundreds of components
+            </h3>
+            <div class="demo_links">
+                <a href=""><img src="./img/feauted_imgs/seelive.png" alt="" class="demo_link"></a>
+                <a href=""><img src="./img/feauted_imgs/sourceCode.png" alt="" class="demo_link"></a>
+            </div>
+        </div>
+        <ul class="skill_sets">
+            <li class="skill_set">css</li>
+            <li class="skill_set">css</li>
+        </ul>
+        <p class="featured__description">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea
+        </p>
+    </div> -->
+    <!-- footer -->
     <footer>
-        <img class="bg3" src="img/bg-3.png">
+        <img class="bg3" src="img/bg-3.png" alt="background">
         <span>swanyeelinn000@gmial.com</span>
         <div class="icons2">
             <a hre="#"><i class="social fa fa-twitter"></i></a>
@@ -177,8 +214,9 @@
         </div>
         <div class="indicator2"></div>
     </footer>
-    <img class="bg6" src="img/bg-6.png">
-    <img class="bg7" src="img/bg-7.png">
-    <img class="bg8" src="img/bg-8.png">
+    <img class="bg6" src="img/bg-6.png" alt="background">
+    <img class="bg7" src="img/bg-7.png" alt="background">
+    <img class="bg8" src="img/bg-8.png" alt="background">
+    <script src="./script.js"></script>
 </body>
 </html>
