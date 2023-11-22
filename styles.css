@@ -20,15 +20,17 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0;
   margin-bottom: -1em;
-  padding: 1em;
+  padding: 0.5em;
+  background-color: white;
 }
 
 .mylogo {
   color: var(--neutrals-n-800, #36b37e);
   font-weight: 400;
   line-height: 28px;
-  padding: 0.5em 0;
+  padding: 0.5em 1em;
   transition: rotate 1s, color 1s;
   animation-duration: 1s;
   animation-name: logoRotate;
@@ -52,8 +54,6 @@ body {
   font-weight: 700;
   line-height: 130%;
   margin: 0;
-  animation-duration: 1s;
-  animation-name: slideIn;
 }
 
 .intro2 {
@@ -61,15 +61,12 @@ body {
   font-weight: 700;
   line-height: 52px;
   margin: 0;
-  animation-duration: 2s;
-  animation-name: slideIn;
 }
 
 .content {
   color: var(--neutrals-n-800, #172b4d);
   font-weight: 400;
   line-height: 140%;
-  animation-duration: 5s;
 }
 
 i {
@@ -178,6 +175,8 @@ li:focus {
 }
 
 .aboutme {
+  position: relative;
+  top: 3em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -344,7 +343,9 @@ span {
 
 @media all and (min-width: 375px) {
   .toolbar {
-    width: 21.43em;
+    z-index: 2;
+    width: 100%;
+    position: fixed;
   }
 
   .mylogo {
@@ -363,6 +364,8 @@ span {
   }
 
   .intro {
+    position: relative;
+    top: 3em;
     background-image: url(home_page_bg.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -506,84 +509,115 @@ span {
 /* .menuBtn{
   display: none;
 } */
+
 /* day1 */
-.nav-container{
-  display: block;
-}
-.nav-toogler{
-  display:none;
-}
-.nav-toolbar{
+
+.nav-container {
+  height: 100%;
   width: 100%;
-  display:flex;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  z-index: 2;
+}
+
+.nav-toogler {
+  display: none;
+}
+
+.nav-toolbar {
+  width: 100%;
+  display: flex;
   padding: 1em 0;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5em; 
+  align-items: start;
+  gap: 0.5em;
 }
-.nav-link{
+
+.close img {
+  height: 20px;
+  width: 28px;
+}
+
+.close {
+  margin-left: 90%;
+  background-color: white;
+}
+
+.nav-link {
+  font-size: 2em;
+  padding: 0.5em;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-right: 80%;
   text-decoration: none;
-  color: #087045;
+  color: #172b4d;
 }
-.nav-link:hover{
+
+.nav-link:hover {
   text-decoration: underline;
 }
+
 /* @media  (max-width:500px) {
   .nav-container{
     display: none;
   }
-  
- 
 } */
+
 /* day2 */
-.showCard{
+.showCard {
   position: absolute;
   top: 20%;
   left: 50%;
   transform: translate(-50%);
 }
-.projectCard{
+
+.projectCard {
   width: 900px;
   background-color: #ebe2e2;
-   box-shadow: 5px 5px 18px -3px rgba(0,0,0,0.38);
+  box-shadow: 5px 5px 18px -3px rgba(0, 0, 0, 0.38);
   padding: 1em;
   text-align: right;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
-.projectCard .close__card{
+
+.projectCard .close__card {
   padding: 0.5em;
   color: pink;
 }
-.feautred_bgcover{
+
+.feautred_bgcover {
   width: 100%;
   min-height: 400px;
   background: url("./img/feauted_imgs/projectImg.png");
   background-repeat: no-repeat;
   background-position: center;
   object-fit: cover;
-  
 }
-.featured_titles{
+
+.featured_titles {
   padding: 0 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.projectTitle{
+
+.projectTitle {
   font-family: inherit;
   width: 589px;
   height: 82px;
-  color:  #172B4D;
+  color: #172b4d;
   font-size: 32px;
   font-weight: 700;
   line-height: 44px;
-  letter-spacing: 0em;
+  letter-spacing: 0;
   text-align: left;
-
 }
-.skill_sets{
+
+.skill_sets {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -591,15 +625,17 @@ span {
   justify-content: flex-start;
   padding: 0 1em;
 }
-.skill_set{
-padding:1em 2em;
-border-radius: 8px;
-background-color: #EBECF0;
-font-size: 18px;
-font-weight: 500;
-color: #3a4a42;
+
+.skill_set {
+  padding: 1em 2em;
+  border-radius: 8px;
+  background-color: #ebecf0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #3a4a42;
 }
-.featured__description{
+
+.featured__description {
   width: 876px;
   height: 151px;
   font-family: inherit;
@@ -609,9 +645,11 @@ color: #3a4a42;
   text-align: left;
   color: #344563;
 }
-.demo_links{
 
-}
+/* .demo_links{
+
+} */
+
 @media all and (min-width: 768px) {
   .home {
     background-image: url(Header-llustration-desktop@2x.png);
@@ -649,9 +687,9 @@ color: #3a4a42;
     color: #36b37e;
   }
 
-   /* .bar {
+  .bar {
     display: none !important;
-  }  */
+  }
 
   .intro br {
     display: none;
