@@ -538,9 +538,11 @@ span {
 /* day2 */
 .showCard{
   position: absolute;
+  padding: 20px;
   top: 20%;
   left: 50%;
   transform: translate(-50%);
+  
 }
 .projectCard{
   width: 900px;
