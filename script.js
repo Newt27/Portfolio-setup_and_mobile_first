@@ -10,8 +10,8 @@ const data = [{
         name:"Keeping track of hundreds of components",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         featured_img:"",
-        linkversion_link:"",
-        sourceCode_link:"",
+        linkversion_link:"https://newt27.github.io/Portfolio-setup_and_mobile_first/",
+        sourceCode_link:"https://github.com/Newt27/Portfolio-setup_and_mobile_first",
         technologies:['CodeKit','Github','JavaScript','Bootstrap','Terminal','Codepen'],
 
     }
@@ -28,15 +28,15 @@ function createCardUI(){
            ${data[0].name}
         </h3>
         <div class="demo_links">
-            <a href=""><img src="./img/feauted_imgs/seelive.png" alt="" class="demo_link"></a>
-            <a href=""><img src="./img/feauted_imgs/sourceCode.png" alt="" class="demo_link"></a>
+            <a href="${data[0].linkversion_link}"><img src="./img/feauted_imgs/seelive.png" alt="" class="demo_link"></a>
+            <a href="${data[0].sourceCode_link}"><img src="./img/feauted_imgs/sourceCode.png" alt="" class="demo_link"></a>
         </div>
     </div>
     <ul class="skill_sets">
         ${data[0].technologies.map(tech=>`<li class="skill_set">${tech}</li>`).join('')}
      </ul>
     
-    
+   
     <p class="featured__description">
         ${data[0].description}
     </p>
