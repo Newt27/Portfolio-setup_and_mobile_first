@@ -51,3 +51,47 @@ const showProjectBtns = Array.from(document.querySelectorAll('.seeProjectsBtn'))
 for(const showProjectBtn of showProjectBtns){
     showProjectBtn.addEventListener('click',createCardUI)
 };
+// day3 form validation
+const form  = document.querySelector('.form');
+const submitBtn = document.querySelector('.submit_btn');
+const errMessage = document.querySelector('.err-msg');
+// taking values
+const firstName = document.querySelector('.first-name');
+const lastName= document.querySelector('.last-name');
+const comments = document.querySelector('.message');
+const email= document.querySelector('.email-address');
+function takeValuesfromInput(){
+    const firstNameValue = firstName.value;
+    const lastNameValue = lastName.value;
+    const commentsValue = comments.value;
+    const emailValue = email.value;
+    return { firstNameValue,lastName,commentsValue,emailValue };
+}
+function resetForm(){
+    firstName.value='';
+    lastName.value='';
+    comments.value='';
+    email.value='';
+}
+submitBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+   console.log('sumbit');
+    // take email value
+    const {firstNameValue,lastName,commentsValue,emailValue} = takeValuesfromInput();
+    const urEmail = emailValue.toLowerCase();
+    console.log(urEmail,emailValue);
+    if(emailValue===urEmail){
+        errMessage.style.display='none';
+        // errMessage.classList.remove('show-msg');
+        console.log('ok');
+    }
+    if(emailValue!==urEmail){
+        errMessage.style.display='block';
+        setTimeout(()=>{
+            errMessage.style.display='none';
+        },2000);
+        
+    }
+    // clear input
+   resetForm();
+})

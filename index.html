@@ -165,13 +165,15 @@
     </section>
     <section class="contact" id="contact">
         <p>I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.</p>
-        <form action="https://formspree.io/f/mpzgkrbn" method="post">
+        <form action="https://formspree.io/f/mpzgkrbn" method="post" class="form">
+            
             <input type="text" id="fullName" name="fullName" placeholder="Full Name" maxlength="30" required>
-            <input type="text" id="firstName" name="firstName" placeholder="First Name" maxlength="30" required>
-            <input type="text" id="lastName" id="lastName" placeholder="Last Name" maxlength="30" required>
-            <input type="email" id="email" name="email" placeholder="Email Address" required>
-            <textarea id="message" placeholder="Hey, I'd like to connect to..." maxlength="500" required></textarea>
-            <button type="submit" value="get-in-touch">Get in touch</button>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name" maxlength="30" required class="first-name">
+            <input type="text" id="lastName" id="lastName" placeholder="Last Name" maxlength="30" required  class="last-name">
+            <input type="email" id="email" name="email" placeholder="Email Address" required class="email-address">
+            <textarea id="message" placeholder="Hey, I'd like to connect to..." maxlength="500" required class="message"></textarea>
+            <p class="err-msg">Error</p>
+            <button type="submit" value="get-in-touch" class="submit_btn">Get in touch</button>
         </form>
     </section>
     <!-- demo -->
