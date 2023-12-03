@@ -1,10 +1,23 @@
 // day1
 const showMenuBtn = document.querySelector('.showMenuBtn');
 const pageLinks = document.querySelector('.nav-container');
+const closeBtn = document.querySelector('.close');
+const navLink = document.querySelectorAll('.nav-link');
+
 showMenuBtn.addEventListener('click',()=>{
-    pageLinks.classList.toggle('nav-toogler');
-    console.log("clicked");
-})
+    pageLinks.style.display = "flex";
+});
+
+closeBtn.addEventListener('click', ()=>{
+    pageLinks.style.display= "none";
+});
+
+for (i = 0; i < navLink.length; i++){
+    navLink[i].addEventListener('click', () => {
+        pageLinks.style.display = "none";
+    })
+}
+
 // day2
 const data = [{
         name:"Keeping track of hundreds of components",
