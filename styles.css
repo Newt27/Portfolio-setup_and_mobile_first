@@ -299,10 +299,13 @@ li:focus {
   background: var(--theme-1-neutrals-11, #fff);
   transition: border 1s;
 }
-#firstName{
+
+#firstName {
   outline: red;
+
   /* background-color: red; */
 }
+
 input:focus {
   border: 1px solid #36b37f;
   outline: none;
@@ -605,7 +608,6 @@ span {
 }
 
 .projectCard {
-  
   max-width: 600px;
   margin: 0 auto;
   background-color: #ebe2e2;
@@ -626,15 +628,16 @@ span {
 .feautred_bgcover {
   width: 100%;
   min-height: 4em;
-  max-height:12em;
+  max-height: 12em;
 }
-.feautred_bgcover img{
- width: 100%;
- height: 100%;
- object-fit:cover;
- border-radius: 8px;
 
+.feautred_bgcover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
+
 .featured_titles {
   padding: 0 1em;
   display: flex;
@@ -653,18 +656,20 @@ span {
   letter-spacing: 0;
   text-align: left;
 }
-.demo_links{
- 
+
+.demo_links {
   display: flex;
   gap: 0.5em;
   justify-content: center;
 }
-.demo_link{
+
+.demo_link {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
 }
+
 .skill_sets {
   display: flex;
   flex-direction: row;
@@ -691,7 +696,7 @@ span {
   font-family: inherit;
   font-size: 14px;
   font-weight: 300;
-  line-height:1.4em;
+  line-height: 1.4em;
   text-align: left;
   color: #344563;
 }
