@@ -32,10 +32,12 @@ const data = [{
 const showCardDiv = document.querySelector('.showCard');
 function createCardUI(){
     showCardDiv.innerHTML= `<div class="projectCard">
-    <span class="close__card"><i class="fa fa-bars close_popup"></i></span>
+    <span class="close__card"><i class="fa-solid fa-x fa close_popup"></i></span>
     <div class="feautred_bgcover">
-       
-    </div>
+        <img src="./img/feauted_imgs/projectImg.png">  
+        </img>
+     </div>
+     
     <div class="featured_titles">
         <h3 class="projectTitle">
            ${data[0].name}
@@ -65,6 +67,7 @@ for(const showProjectBtn of showProjectBtns){
     showProjectBtn.addEventListener('click',createCardUI)
 };
 // day3 form validation
+//------------------------------------------
 const form  = document.querySelector('.form');
 const submitBtn = document.querySelector('.submit_btn');
 const errMessage = document.querySelector('.err-msg');
@@ -78,7 +81,18 @@ function takeValuesfromInput(){
     const lastNameValue = lastName.value;
     const commentsValue = comments.value;
     const emailValue = email.value;
-    return { firstNameValue,lastName,commentsValue,emailValue };
+    return { firstNameValue,lastNameValue,commentsValue,emailValue };
+}
+// SHOW ERRO FUNCTION
+function showEror(message,displayStyle){
+    const errHolder = document.createElement('p');
+    errHolder.classList="err-msg";
+    errHolder.innerHTML=message;
+    errHolder.style.display=displayStyle;
+    form.appendChild(errHolder);
+    setTimeout(() => {
+        errHolder.style.display='none';
+    }, 3000);
 }
 function resetForm(){
     firstName.value='';
@@ -86,24 +100,22 @@ function resetForm(){
     comments.value='';
     email.value='';
 }
-submitBtn.addEventListener('click',(e)=>{
+form.addEventListener('submit',(e)=>{
     e.preventDefault();
    console.log('sumbit');
-    // take email value
+    // take values
     const {firstNameValue,lastName,commentsValue,emailValue} = takeValuesfromInput();
     const urEmail = emailValue.toLowerCase();
     console.log(urEmail,emailValue);
-    if(emailValue===urEmail){
-        errMessage.style.display='none';
-        // errMessage.classList.remove('show-msg');
-        console.log('ok');
-    }
     if(emailValue!==urEmail){
-        errMessage.style.display='block';
-        setTimeout(()=>{
-            errMessage.style.display='none';
-        },2000);
-        
+        showEror("Email should be in lower case","block");
+    }
+    else if( firstNameValue==""||lastName==""||commentsValue==""||emailValue=="" ){
+        showEror("Inputs shouldn't be empty!","block");
+        console.log('eror');
+    }
+    else{
+        console.log('err');
     }
     // clear input
    resetForm();
