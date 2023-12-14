@@ -44,8 +44,9 @@ function createCardUI(){
         </h3>
         <div class="demo_links">
             <a href="${data[0].linkversion_link}"><img src="./img/feauted_imgs/seelive.png" alt="" class="demo_link"></a>
-            <a href="${data[0].sourceCode_link}"><img src="./img/feauted_imgs/sourceCode.png" alt="" class="demo_link"></a>
+            <a href="${data[0].sourceCode_link}"><img src="./img/feauted_imgs/sourceCode.png" alt="" class="demo_link"></a>  
         </div>
+        
     </div>
     <ul class="skill_sets">
         ${data[0].technologies.map(tech=>`<li class="skill_set">${tech}</li>`).join('')}
@@ -55,6 +56,10 @@ function createCardUI(){
     <p class="featured__description">
         ${data[0].description}
     </p>
+    <div class="demo_links_small_screen">
+        <a href=${data[0].linkversion_link} class="small-screen-link">See Live <i class="fa-solid fa-paper-plane fa"></i></a>
+        <a href=${data[0].sourceCode_link} class="small-screen-link">See Source <i class="fa-brands fa-github fa"></i></a>  
+    </div>
 </div>`;
 const closeCard = document.querySelector('.close_popup');
 closeCard.addEventListener('click',()=>{
