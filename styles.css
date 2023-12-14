@@ -787,15 +787,6 @@ span {
   .featured__description {
     order: 4;
   }
-
-
-  /* .demo_links{
-    display: none;
-  } */
-
-  /* .skill_sets{
-    display: none;
-  } */
 }
 
 @media all and (min-width: 768px) {
