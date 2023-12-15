@@ -344,7 +344,10 @@ textarea:focus {
 .show-msg {
   display: none;
 }
-
+/* reset form data */
+.reset_btn:hover{
+  background:#f00;
+}
 footer {
   display: flex;
   flex-direction: column;

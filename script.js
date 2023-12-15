@@ -76,6 +76,7 @@ for(const showProjectBtn of showProjectBtns){
 const form  = document.querySelector('.form');
 const submitBtn = document.querySelector('.submit_btn');
 const errMessage = document.querySelector('.err-msg');
+const resetBtn  = document.querySelector('.reset_btn');
 // taking values
 const firstName = document.querySelector('.first-name');
 const lastName= document.querySelector('.last-name');
@@ -99,7 +100,7 @@ function showEror(message,displayStyle){
         errHolder.style.display='none';
     }, 3000);
 }
-function resetForm(){
+function clearForm(){
     firstName.value='';
     lastName.value='';
     comments.value='';
@@ -109,7 +110,8 @@ form.addEventListener('submit',(e)=>{
     e.preventDefault();
    console.log('sumbit');
     // take values
-    const {firstNameValue,lastName,commentsValue,emailValue} = takeValuesfromInput();
+    const {firstNameValue,lastNameValue,commentsValue,emailValue} = takeValuesfromInput(); 
+    saveInLocalStorage('data',{firstNameValue,lastNameValue,commentsValue,emailValue});
     const urEmail = emailValue.toLowerCase();
     console.log(urEmail,emailValue);
     if(emailValue!==urEmail){
@@ -123,5 +125,37 @@ form.addEventListener('submit',(e)=>{
         console.log('err');
     }
     // clear input
-   resetForm();
+    clearForm();
 })
+// day 4 local stroage
+function saveInLocalStorage(keyname,infos){
+    localStorage.setItem(keyname,JSON.stringify(infos));
+}
+function deleteDataFromStorage(){
+    localStorage.removeItem(data);
+}
+function checkingDataExistence(){
+    const storedDatas=localStorage.getItem('data');
+    if(storedDatas){
+        const infos = JSON.parse(storedDatas);
+        firstName.value=infos.firstNameValue;
+        lastName.value=infos.lastNameValue;
+        email.value=infos.emailValue;
+        comments.value=infos.commentsValue;
+        console.log(infos.firstNameValue);
+    }
+    else{
+        const {...datas} = takeValuesfromInput(); 
+        saveInLocalStorage('data',{...datas});
+        console.log('no data');
+    }
+}
+// delete data in localstroage
+resetBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    clearForm();
+    localStorage.removeItem('data');
+})
+window.addEventListener('DOMContentLoaded',()=>{
+    checkingDataExistence();
+});
