@@ -267,6 +267,7 @@ li:focus {
 }
 
 .contact {
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -282,16 +283,18 @@ li:focus {
   height: 363px;
 }
 
-.contact form {
+.contact .form {
   display: flex;
   flex-direction: column;
   gap: 1em;
+  max-height: 400px;
 }
 
 .contact input {
   padding: 1em;
   width: 327px;
   height: 48px;
+  color: #28352f;
   font-style: italic;
   box-sizing: border-box;
   border-radius: 4px;
@@ -300,18 +303,13 @@ li:focus {
   transition: border 1s;
 }
 
-#firstName {
-  outline: red;
-
-  /* background-color: red; */
-}
-
 input:focus {
   border: 1px solid #36b37f;
   outline: none;
 }
 
 textarea {
+  color: #28352f;
   padding: 1em;
   width: 327px;
   height: 114px;
@@ -600,12 +598,13 @@ span {
 
 /* day2 */
 .showCard {
-  margin: 0 auto;
   position: absolute;
+  margin: 0 auto;
   padding: 1em;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%);
+  top: 30%;
+
+  /* left: 50%;
+  transform: translate(-50%); */
 }
 
 .projectCard {
