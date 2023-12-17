@@ -178,15 +178,15 @@ form.addEventListener('submit',(e)=>{
         console.log('err');
     }
     // clear input
-    clearForm();
+    //clearForm();
 })
 // day 4 local stroage
 function saveInLocalStorage(keyname,infos){
     localStorage.setItem(keyname,JSON.stringify(infos));
 }
-function deleteDataFromStorage(){
-    localStorage.removeItem(data);
-}
+// function deleteDataFromStorage(){
+//     localStorage.removeItem(data);
+// }
 function checkingDataExistence(){
     const storedDatas=localStorage.getItem('data');
     if(storedDatas){
@@ -220,7 +220,15 @@ function createElement(){
 // download resume
 const downloadFile = document.querySelector('.downloadResume');
 downloadFile.addEventListener('click',()=>{
-    window.open("./README.md");
+    // window.open("./resume.html");
+     const content = '<!DOCTYPE html><html><head><title>Resume</title></head><body><h1>Hello, how was ur day?</h1></h1></body></html>';
+     const blob = new Blob([content], { type: 'text/html' });
+     const linkTag = document.createElement('a');
+     linkTag.download = 'resume.html';
+     linkTag.href = window.URL.createObjectURL(blob);
+     document.body.appendChild(linkTag);
+     linkTag.click();
+     document.body.removeChild(linkTag);
 })
 window.addEventListener('DOMContentLoaded',()=>{
     checkingDataExistence();
