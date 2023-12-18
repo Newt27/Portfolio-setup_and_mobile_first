@@ -899,7 +899,7 @@ span {
     position: absolute;
     width: 15%;
     right: 0;
-    bottom: 5em;
+    bottom: -110em;
   }
 
   .bg7 {
@@ -907,7 +907,7 @@ span {
     position: absolute;
     width: 15%;
     left: 0;
-    bottom: 3em;
+    bottom: -110em;
   }
 
   .bg8 {
@@ -915,7 +915,7 @@ span {
     position: absolute;
     width: 10%;
     left: 20%;
-    bottom: 6em;
+    bottom: -108em;
   }
 }
 
