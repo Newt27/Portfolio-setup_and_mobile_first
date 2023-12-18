@@ -719,6 +719,24 @@ span {
 
   .projectCard {
     max-height: 600px;
+    max-width: 600px;
+  }
+
+  .projectTitle {
+    font-size: 1em;
+  }
+
+  img.demo-link {
+    width: 100%;
+    height: 2em;
+  }
+
+  .skill-set {
+    font-size: 10px;
+  }
+
+  .featured-description {
+    font-size: 10px;
   }
 
   .project p {
@@ -933,9 +951,26 @@ span {
   }
 
   .projectCard {
-    max-width: 600px;
-    min-height: 300px;
-    max-height: 650px;
+    max-width: 1000px;
+    max-height: 800px;
+    position: relative;
+    bottom: 3em;
+  }
+
+  .projectTitle {
+    font-size: 1.2em;
+  }
+
+  .featured-titles {
+    font-size: 1.6em;
+  }
+
+  .skill-set {
+    font-size: 13px;
+  }
+
+  .featured-description {
+    font-size: 16px;
   }
 
   li {
@@ -1147,7 +1182,6 @@ span {
 }
 
 .featured-titles {
-  padding: 0 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1156,9 +1190,8 @@ span {
 .projectTitle {
   font-family: inherit;
   width: 32em;
-  min-height: 5.125em;
+  min-height: 3em;
   color: #172b4d;
-  font-size: 1.2em;
   font-weight: 700;
   line-height: 1.4em;
   letter-spacing: 0;
@@ -1169,7 +1202,8 @@ span {
   width: 100%;
   display: flex;
   gap: 0.5em;
-  justify-content: center;
+  justify-content: right;
+  align-items: top;
 }
 
 .demo-link {
@@ -1185,26 +1219,23 @@ span {
   flex-wrap: wrap;
   gap: 0.5em;
   justify-content: flex-start;
-  padding: 0 1em;
+  padding: 1em 0;
 }
 
 .skill-set {
   padding: 0.5em 1em;
   border-radius: 8px;
   background-color: #ebecf0;
-  font-size: 15px;
   font-weight: 500;
   color: #3a4a42;
 }
 
 .projectCard .featured-description {
   width: 100%;
-  max-width: 54.75em;
   padding: 0.4em;
 
   /* overflow: hidden; */
   font-family: inherit;
-  font-size: 14px;
   font-weight: 300;
   line-height: 1.4em;
   text-align: left;

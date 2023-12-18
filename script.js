@@ -23,7 +23,7 @@ const contactDiv = document.querySelector('.contactSection');
 
 const data = [
     {
-        name:"Keeping track of hundreds of components1",
+        name:"Keeping track of hundreds of components",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         featured_img:"./img/feauted_imgs/projectImg.png",
         linkversion_link:"https://newt27.github.io/Portfolio-setup_and_mobile_first/",
@@ -32,16 +32,7 @@ const data = [
 
     },
     {
-        name:"Keeping track of hundreds of components2",
-        description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-        featured_img:"./img/feauted_imgs/projectImg.png",
-        linkversion_link:"https://newt27.github.io/Portfolio-setup_and_mobile_first/",
-        sourceCode_link:"https://github.com/Newt27/Portfolio-setup_and_mobile_first",
-        technologies:['CodeKit','Github','JavaScript'],
-
-    },
-    {
-        name:"Keeping track of hundreds of components3",
+        name:"Keeping track of hundreds of components",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         featured_img:"./img/feauted_imgs/projectImg.png",
         linkversion_link:"https://newt27.github.io/Portfolio-setup_and_mobile_first/",
@@ -50,25 +41,34 @@ const data = [
 
     },
     {
-        name:"Keeping track of hundreds of components4",
+        name:"Keeping track of hundreds of components",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         featured_img:"./img/feauted_imgs/projectImg.png",
         linkversion_link:"https://newt27.github.io/Portfolio-setup_and_mobile_first/",
         sourceCode_link:"https://github.com/Newt27/Portfolio-setup_and_mobile_first",
-        technologies:['CodeKit','Github'],
+        technologies:['CodeKit','Github','JavaScript','Bootstrap','Terminal','Codepen'],
 
     },
     {
-        name:"Keeping track of hundreds of components5",
+        name:"Keeping track of hundreds of components",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         featured_img:"./img/feauted_imgs/projectImg.png",
         linkversion_link:"https://newt27.github.io/Portfolio-setup_and_mobile_first/",
         sourceCode_link:"https://github.com/Newt27/Portfolio-setup_and_mobile_first",
-        technologies:['CodeKit','Github','JavaScript'],
+        technologies:['CodeKit','Github','JavaScript','Bootstrap','Terminal','Codepen'],
 
     },
     {
-        name:"Keeping track of hundreds of components6",
+        name:"Keeping track of hundreds of components",
+        description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+        featured_img:"./img/feauted_imgs/projectImg.png",
+        linkversion_link:"https://newt27.github.io/Portfolio-setup_and_mobile_first/",
+        sourceCode_link:"https://github.com/Newt27/Portfolio-setup_and_mobile_first",
+        technologies:['CodeKit','Github','JavaScript','Bootstrap','Terminal','Codepen'],
+
+    },
+    {
+        name:"Keeping track of hundreds of components",
         description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
         featured_img:"./img/feauted_imgs/projectImg.png",
         linkversion_link:"https://newt27.github.io/Portfolio-setup_and_mobile_first/",
